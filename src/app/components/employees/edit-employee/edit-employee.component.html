@@ -1,0 +1,32 @@
+<app-header></app-header>
+<div class="container my-5">
+    <h3 class="m-3">Edit Employee</h3>   
+        <form #form="ngForm" (ngSubmit)="updateEmployee()">
+            <div class="mb-3">
+                <label for="id" class="form-label">ID</label>
+                <input type="id" class="form-control" id="name" name="id" readonly [(ngModel)]="getEmployeeRequest.id">
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="name" class="form-control" id="name" name="name" [(ngModel)]="getEmployeeRequest.name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" [(ngModel)]="getEmployeeRequest.email">
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="number" class="form-control" id="phone" name="phone" [(ngModel)]="getEmployeeRequest.phone">
+            </div>
+            <div class="mb-3">
+              <label for="salary" class="form-label">Salary</label>
+              <input type="number" class="form-control" id="salary" name="salary" [(ngModel)]="getEmployeeRequest.salary">
+            </div>
+            <div class="mb-3">
+              <label for="department" class="form-label">Department</label>
+              <input type="text" class="form-control" id="department" name="department" [(ngModel)]="getEmployeeRequest.department">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+</div>
+
